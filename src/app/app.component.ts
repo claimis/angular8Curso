@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-curso-avanzado';
+  precio;
+
+  mostrarPrecio()
+  {
+    console.log(this.precio);
+  }
+
 }
