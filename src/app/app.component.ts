@@ -8,10 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-curso-avanzado';
   precio;
+  datoHijo: any;
 
   mostrarPrecio()
   {
     console.log(this.precio);
+  }
+
+  verDatosParque(event)
+  {
+    this.datoHijo = event;
+    console.log(event);
   }
 
 }

@@ -1,3 +1,6 @@
 <tienda></tienda>
 <input type="text" [(ngModel)]="precio" (keyup)="mostrarPrecio()"/>
-<parques [nombre]="precio" [quartMeter]="'metros por defecto'"></parques> <!--De esta manera se introduce desde el padre al hijo -->
+
+<h1>Datos desde el hijo</h1>
+{{ datoHijo }}
+<parques [nombre]="precio" [quartMeter]="'metros por defecto'" (bindDataParent)="verDatosParque($event)"></parques> <!--De esta manera se introduce desde el padre al hijo -->
