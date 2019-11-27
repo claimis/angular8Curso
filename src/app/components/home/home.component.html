@@ -1,0 +1,10 @@
+<p>
+  home works!
+</p>
+<tienda></tienda>
+<input type="text" [(ngModel)]="precio" (keyup)="mostrarPrecio()"/>
+
+<h1>Datos desde el hijo</h1>
+{{ datoHijo }}
+<parques [nombre]="precio" [quartMeter]="'metros por defecto'" (bindDataParent)="verDatosParque($event)"></parques> <!--De esta manera se introduce desde el padre al hijo -->
+<router-outlet></router-outlet>

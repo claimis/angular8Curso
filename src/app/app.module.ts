@@ -1,21 +1,36 @@
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { KeeperComponent } from './components/keeper/keeper.component';
+import { AnimalsComponent } from './components/animals/animals.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { TiendaComponent } from './components/tienda/tienda.component';
 import { ParquesComponent } from './components/parques/parques.component';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import {routing, appRoutingProviders } from './app.routing';
 
 @NgModule({
   declarations: [
     AppComponent,
     TiendaComponent,
-    ParquesComponent
+    ParquesComponent,
+    AnimalsComponent,
+    KeeperComponent,
+    ContactComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    routing,
+    appRoutingProviders
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders
+  ],
   bootstrap: [AppComponent] //componente inicial que carga la aplicación
 })
 export class AppModule { }

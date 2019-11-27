@@ -27,7 +27,6 @@ export class ParquesComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
     ngOnInit()
     {
         console.log("componente cargado");
-        this.ref.destroy();
     }
 
     ngOnDestroy()
