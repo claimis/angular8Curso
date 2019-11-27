@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
 @Component({
     selector: 'parques',
@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
     styleUrls: ['./parques-component.css']
   })
 
-export class ParquesComponent {
+export class ParquesComponent implements OnChanges, OnInit, DoCheck, OnDestroy {
     @Input() nombre: string;
     public tituloParque: string;
     @Input('quartMeter') public metros: number; // aparecerá metros por defecto, ya que está hardcodeado.
@@ -22,6 +22,27 @@ export class ParquesComponent {
         this.metros = 360;
         this.vegetacion = 'Alta';
         this.nombreDelParque = "nombre principal";
+    }
+
+    ngOnInit()
+    {
+        console.log("componente cargado");
+        this.ref.destroy();
+    }
+
+    ngOnDestroy()
+    {
+        console.log("destruccion");
+    }
+
+    ngOnChanges(changes: SimpleChanges)
+    {
+        console.log(changes);
+    }
+
+    ngDoCheck()
+    {
+        console.log("el docheck");
     }
 
     emitirEvento(){
