@@ -17,7 +17,8 @@ const appRoutes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'keeper', component: KeeperComponent},
     {path: 'animals', component: AnimalsComponent},
-    {path: 'contact', component: ContactComponent}
+    {path: 'contact', component: ContactComponent},
+    {path: 'tienda', component: TiendaComponent}
 ];
 
 export const appRoutingProviders : any[] = [];

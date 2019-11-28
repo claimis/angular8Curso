@@ -10,27 +10,34 @@ import { ParquesComponent } from './components/parques/parques.component';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import {routing, appRoutingProviders } from './app.routing';
+import { SimpleTinymceComponent } from './simple-tinymce/simple-tinymce.component';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TiendaComponent,
-    ParquesComponent,
-    AnimalsComponent,
-    KeeperComponent,
-    ContactComponent,
-    HomeComponent,
-    NavbarComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    routing,
-    appRoutingProviders
-  ],
-  providers: [
-    appRoutingProviders
-  ],
-  bootstrap: [AppComponent] //componente inicial que carga la aplicación
+   declarations: [
+      AppComponent,
+      TiendaComponent,
+      ParquesComponent,
+      AnimalsComponent,
+      KeeperComponent,
+      ContactComponent,
+      HomeComponent,
+      NavbarComponent,
+      SimpleTinymceComponent
+
+   ],
+   imports: [
+      BrowserModule,
+      FormsModule,
+      routing,
+      appRoutingProviders,
+      EditorModule
+   ],
+   providers: [
+      appRoutingProviders
+   ],
+   bootstrap: [
+      AppComponent//componenteinicialquecargalaaplicación
+   ]
 })
 export class AppModule { }
