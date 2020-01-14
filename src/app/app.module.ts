@@ -1,3 +1,5 @@
+import { AdminModule } from './admin/admin.module';
+import { ModuloEmailModule } from './moduloemail/modulemail.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -10,7 +12,6 @@ import { ParquesComponent } from './components/parques/parques.component';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import {routing, appRoutingProviders } from './app.routing';
-import { SimpleTinymceComponent } from './simple-tinymce/simple-tinymce.component';
 import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
@@ -23,15 +24,15 @@ import { EditorModule } from '@tinymce/tinymce-angular';
       ContactComponent,
       HomeComponent,
       NavbarComponent,
-      SimpleTinymceComponent
-
    ],
    imports: [
       BrowserModule,
       FormsModule,
       routing,
       appRoutingProviders,
-      EditorModule
+      EditorModule,
+      ModuloEmailModule,
+      AdminModule
    ],
    providers: [
       appRoutingProviders
